@@ -40,6 +40,19 @@ func (p *Pet) Sleep() {
 	}
 }
 
+func (p *Pet) Decay() {
+	p.Hungry -= 1
+	if p.Hungry <= 0 {
+		p.Healt -= 1
+		p.Happy -= 1
+	}
+
+}
+func (p Pet) String() string {
+	return fmt.Sprintf("имя:%v щастье%v енергия:%v тип:%v голод:%v здоровье:%v возраст:%v\n",
+		p.Name, p.Happy, p.Energy, p.Animal, p.Hungry, p.Healt, p.Age)
+}
+
 func (p *Pet) Play() {
 	if p.Happy >= 100 {
 		p.Happy = 100

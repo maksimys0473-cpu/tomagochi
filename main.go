@@ -30,7 +30,12 @@ func main() {
 	}
 
 	for {
-		fmt.Printf("имя:%v щастье%v енергия:%v тип:%v голод:%v здоровье:%v возраст:%v\n", Pet1.Name, Pet1.Happy, Pet1.Energy, Pet1.Animal, Pet1.Hungry, Pet1.Healt, Pet1.Age)
+		// fmt.Printf("имя:%v щастье%v енергия:%v тип:%v голод:%v здоровье:%v возраст:%v\n", Pet1.Name, Pet1.Happy, Pet1.Energy, Pet1.Animal, Pet1.Hungry, Pet1.Healt, Pet1.Age)
+
+		fmt.Println(Pet1)
+
+		go Pet1.Decay()
+
 		fmt.Println("1.покормить")
 		fmt.Println("2.поспать")
 		fmt.Println("3.поиграть")
